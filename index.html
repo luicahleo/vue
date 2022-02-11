@@ -10,6 +10,127 @@
 
 <body>
 
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+
+
+        <!-- example1 -->
+        <!-- {{ message }} -->
+        <!-- example2 -->
+        <!-- {{counter}} -->
+        <!-- example3 -->
+        <!-- {{saludo + nombre}} -->
+        <!-- example4 -->
+        <!-- <button v-on:click="decrement()">
+            -
+        </button> {{counter}}
+        <button v-on:click="increment()">
+            +
+        </button> -->
+        <!-- example5 -->
+        <!-- <form action="" v-on:submit.prevent="addPais()">
+            <input type="text" v-model="name">
+            <button>Agregar</button>
+        </form>
+        <br> {{paises}} -->
+
+
+    </div>
+
+
+    <!-- <script>
+        Vue.createApp({
+                data() {
+                    return {
+                        name: "",
+                        paises: ['Bolivia', 'España']
+                    }
+                },
+                methods: {
+                    addPais() {
+                        this.paises.push(this.name);
+                        this.name = "";
+                    }
+                }
+            }
+
+        ).mount("#app");
+    </script> -->
+
+
+
+    <!-- example4 
+        <script>
+        Vue.createApp({
+                data() {
+                    return {
+                        counter: 0,
+                    }
+                },
+                methods: {
+                    decrement() {
+                        this.counter--;
+                    },
+                    increment() {
+                        this.counter++;
+                    }
+                }
+            }
+
+        ).mount('#app');
+    </script> -->
+
+
+
+
+    <!-- example3 -->
+    <!-- <script>
+        Vue.createApp({
+            data() {
+                return {
+                    saludo: "hola mi nombre es ",
+                    nombre: "Luis",
+                }
+            }
+        }).mount('#app');
+    </script> -->
+
+
+
+
+
+
+    <!-- example 2 
+        <script>
+        Vue.createApp({
+            data() {
+                return {
+                    counter: 0,
+                }
+            },
+            mounted() {
+                setInterval(() => {
+                    this.counter++;
+                }, 500);
+
+            }
+        }).mount('#app');
+    </script> -->
+
+
+
+    <!-- example 1 -->
+    <!-- <script>
+        Vue.createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!'
+                }
+            }
+        }).mount('#app')
+    </script> -->
 </body>
 
 </html>
