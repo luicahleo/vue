@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+
+        <form action="" v-on:submit.prevent="addPais()">
+            <label for="">Pais</label>
+            <br>
+            <input v-model="name" type="text" />
+            <br>
+            <label for="">Capital</label>
+            <br>
+            <input v-model="capital" type="text" />
+            <button>Enviar</button>
+        </form>
+        <ul>
+            <template v-for="(pais, index) in paises" :key="pais.name">
+
+                <li>
+                    {{index+1}}) {{pais.name}} - {{pais.capital}}
+                </li>
+            </template>
+
+        </ul>
+
+
+        {{paises}}
+
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    name: "",
+                    capital: "",
+                    paises: [{
+                        name: "Bolivia",
+                        capital: "Sucre"
+                    }, {
+                        name: "España",
+                        capital: "Madrid"
+                    }]
+                }
+            },
+            methods: {
+                addPais() {
+                    this.paises.push({
+                        name: this.name,
+                        capital: this.capital
+                    });
+                    this.name = "";
+                    this.capital = "";
+                }
+            }
+        }).mount('#app');
+    </script>
+
+
+</body>
+
+</html>

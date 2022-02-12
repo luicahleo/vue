@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+
+        <h1>Hola mundo</h1>
+        <!-- con el v-if, hemos sacado al parrafo del DOM -->
+        <p v-if="active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur numquam, impedit temporibus eius error unde, repudiandae quidem cum quis nobis delectus exercitationem corporis asperiores iure voluptates reiciendis sed nostrum aliquid!</p>
+        <!-- con el v-show, le hemos dado un display: none -->
+        <p v-show="active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quae, sed voluptas laborum, labore quasi at aliquid dolor iusto illo saepe? Deserunt perspiciatis ipsam mollitia illo, tempore nobis nemo eos.</p>
+
+
+
+
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    active: false
+                }
+            },
+            methods: {
+
+            }
+        }).mount('#app');
+    </script>
+
+
+</body>
+
+</html>
